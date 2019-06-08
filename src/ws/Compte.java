@@ -6,12 +6,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.Date;
+
 @XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlAccessorType(XmlAccessType.FIELD)
 public class Compte implements Serializable {
     private Long id;
     private double montant;
-    @XmlTransient
     private Date date;
 
     public Compte(Long id, double montant, Date date) {
@@ -38,7 +38,7 @@ public class Compte implements Serializable {
     public void setMontant(double montant) {
         this.montant = montant;
     }
-
+    @XmlTransient
     public Date getDate() {
         return date;
     }
